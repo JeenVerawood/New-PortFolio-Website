@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-style: normal;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-weight: 600;
+  scroll-behavior: smooth;
+}
+.background {
+  background-color: #050404;
+  animation: changeBackground 15s infinite;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+@keyframes changeBackground {
+  0% { background-image: url('/backgroun-main/1.png'); }
+  33% { background-image: url('/backgroun-main/2.png'); }
+  66% { background-image: url('/backgroun-main/3.png'); }
+  100% { background-image: url('/backgroun-main/4.png'); }
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* navbar */
+
+nav {
+  position: relative;
+  padding: 0 2rem;
+  z-index: 9999;
+}
+.menu{
+  align-items: center;
+}
+.nav-warpper {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  height: 90px;
+  text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.39);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  will-change: transform, opacity;
+}
+.nav-warppersection2{
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  background-color: #ffd900f4;
+  margin: 0 10px;
+  text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.39);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  will-change: transform, opacity;  
+  border-radius: 100px;
+}
+.nav-warppersection2 h1{
+  color: #000000;
+  font-size: 1.5rem;
+}
+.nav-warpper-newclass {
+  position: sticky;
+  top: 20px;
+  z-index: 10000;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.contactsection2{
+  width: 120px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 100px;
+  border: none;
+  transition: .2s;
+}
+.contactsection2:hover{
+  transform: scale(1.1);
+  transition: .2s;
+
+}
+.contactsection2 a {
+  text-decoration: none;
+  color: #333;
+
+}
+.nav-warpper-newclass.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.nav-warpper h1{
+  color: #ffd900;
+  text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.39);
+}
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: .2s ease-in-out;
+}
+ul li a:hover {
+  color: #ffd900;
+  transition: .2s ease-in-out;
+
+}
+
+
+/* main */
+
+.contact {
+  width: 120px;
+  height: 30px;
+  background-color: #ffd900;
+  border-radius: 100px;
+  border: none;
+  transition: .2s;
+}
+.contact:hover{
+  transform: scale(1.1);
+  transition: .2s;
+
+}
+.contact a {
+  text-decoration: none;
+  color: #333;
+
+}
+.myintroduce p {
+  margin-top: 10px;
+  font-size: 1rem ;
+}
+.myintroduce button {
+  margin-top: 20px;
+
+}
+
+/* Main content styling */
+.background-main {
+  height: 800px;
+}
+
+.main-content {
+  margin: auto;
+  width: 70%;
+  height: 600px;
+  display: flex;
+}
+
+.myintroduce {
+  color: #fff;
+  animation: slideUp 1.5s ease-in-out;
+  text-align: center;
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  animation: slideUp 1s ease-out forwards;
+}
+.myintroduce h1 {
+  margin-top: 20px;
+  position: relative;
+}
+.textwriter {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffffff;
+  display: inline-block;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 100%; }
+  60% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+.textwriter-1 {
+  animation: typing 8s steps(40, end) infinite, blink-caret 0.75s step-end;
+  font-size: 3.5rem;
+  color: #ffd900;
+}
+
+.myname-writer {
+  width: 100%;
+}
+
+.myintroduce button {
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 100px;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+span{
+  color: #fff;
+}
+@keyframes colorChange {
+  0% {
+    color: black; /* สีเริ่มต้น */
+  }
+  50% { 
+    color: #ffd900; /* สีระหว่างทาง */
+  }
+  100% {
+    color: black; /* สีสุดท้ายกลับไปที่สีเริ่มต้น */
+  }
+}
+.container span {
+  margin: auto;
+}
+.myintroduce button:hover {
+  background-color: #7c7c7c;
+  color: #fdfdfd;
+  border: 1px #fff solid;
+}
+.slide-icon{
+  margin-top: 150px;
+  opacity: 50%;
+}
+.slide-icon p,
+.slide-icon ion-icon {
+    animation: blink 1.5s infinite;
+}
+.slide-icon {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-icon.visible {
+  opacity: 1;
+}
+
+.slide-icon.hidden {
+  opacity: 0;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.present{
+  width: 100%;
+  height: 1200px;
+  background-color: #000000;
+}
+.showskill {
+  background-color: #161616;
+  flex-flow: wrap;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px -10px -10px 0px;
+  place-content: stretch center;
+  align-items: stretch;
+  max-height: 100%;
+  gap: 10px;
+}
+.python {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  max-width: 100%;
+  margin: 20px;
+}
+
+.python img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0;
+  text-align: center;
+  color: white;
+  line-height: 30px;
+  font-size: 16px;
+  transition: width 1s;
+}
+
+.percentage-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: -10px; /* จัดตำแหน่งของข้อความเปอร์เซ็นต์ให้ตรงกลาง */
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.percentage-text {
+  font-size: 18px;
+  color: #000;
+}
+#present-content {
+  background-color: #171717;
+  color: #dee2e6;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  
+  /* align-items: center;
+  justify-content: center; */
+}
+.what{
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  margin: auto;
+}
+#present-content span {
+  font-size: 1rem;  
+}
+.python-box{
+  background: #fff;
+  border-radius: 40px;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+
+/* reponsive bar  */
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+@media only screen and (max-width: 487px) {
+  .menu {
+    display: none;
+  }
+  .textwriter-1 {
+    /* animation: typing 8s steps(40, end) infinite, blink-caret 0.75s step-end; */
+    font-size:1.6rem;
+  }
+  .myintroduce h1 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 487px) {
+  .ham-container{
+    display: none;
+  }
+} 
+
+/* style.css */
+
+.box {
+  width: 80%;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  opacity: 0; /* ซ่อนกล่องเริ่มต้น */
+  transform: translateY(100px); /* เคลื่อนที่ออกจากมุมมอง */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.box.show {
+  opacity: 1;
+  transform: translateY(0); /* เคลื่อนที่กลับไปยังตำแหน่งปกติ */
+}
+
+.spacer {
+  height: 1500px; /* เพิ่มพื้นที่เพื่อให้คุณสามารถเลื่อนดู */
+}
+
+
+
+
